@@ -1,0 +1,801 @@
+@import url('https://fonts.googleapis.com/css?family=Belleza|Nanum+Myeongjo:400,700|Sawarabi+Mincho|Noto+Serif+SC|Lustria');
+
+html,body{overflow: hidden;
+	@media (max-width : 480px) { /* Extra Small Devices, Phones */ 
+		//overflow-y:scroll;
+		overflow:hidden;
+		height:100vh; width:100vw;
+	}
+} // html, body END
+
+#cboxLoadedContent > img{
+	z-index: 999999;
+}
+
+.thenav{
+	display:grid;
+	grid-template-columns:1fr 1fr;
+	padding: 10px 40px;
+	position: fixed;
+	top:calc(10vh + 18px); width:50%;
+	color:#4678c9; 
+	z-index: 1000000;
+	@media (max-width : 480px) { /* Extra Small Devices, Phones */ 
+		top:40px;
+	}
+
+	.thelogo{
+		float:left;
+    font-family: 'Belleza', 'Sawarabi Mincho', 'Nanum Myeongjo', sans-serif;
+    font-weight:200;
+    font-size:20px;
+    cursor:default;
+	}
+}
+
+.theham{
+  font-family: 'Belleza', 'Sawarabi Mincho', 'Nanum Myeongjo', sans-serif;
+  margin-top:0px;
+  cursor:pointer; color:black;
+  display:none;
+	text-align: right; 
+	right:20px;
+	position:fixed;
+	top:calc(10vh + 38px);
+	z-index:1000000;	
+	width:24px;
+  &:hover{color:#050c16;cursor:pointer; }
+	.hamham-top, .hamham-bottom{
+		border-top:2px solid #4678c9; display:block; margin-bottom:10px;
+		transition:300ms;
+	}
+	@media (max-width : 480px) { /* Extra Small Devices, Phones */ 
+		display:inline;
+		top:60px;
+
+	}
+}
+
+
+.themenu{
+	position: fixed;
+	right:0px;
+	top:calc(10vh + 25px); 
+	//top:0;
+	width:510px;
+	//border-bottom:3px solid rgba(139, 174, 232, 0.5);
+	//background: rgba(139, 174, 232, 0.8);
+	padding:5px 30px;
+	padding-top:7px;
+	//transition:1000ms ease-in-out;
+	z-index:9999;
+//	border-top-left-radius: 5px;
+//	border-bottom-left-radius: 5px;
+	color:#4678c9;
+	@media (max-width : 480px) { /* Extra Small Devices, Phones */ 
+		display:none;
+	}
+	&:hover{
+		right:0;
+	}
+	a{color:#4678c9;font-family: 'Belleza', 'Sawarabi Mincho', 'Nanum Myeongjo', sans-serif; cursor:pointer;
+		margin-left:47px; transition:600ms;
+		&:hover{text-decoration: none;color:#050c16;cursor:pointer; }
+	}
+	.theon{color:#050c16;}
+
+
+
+}//themenu
+
+.themenus{
+	display:none;
+	position: fixed;
+	right:0px;
+	padding:5px 30px;
+	z-index:99999;
+	color:#4678c9;
+	a{color:#4678c9;font-family: 'Belleza', 'Sawarabi Mincho', 'Nanum Myeongjo', sans-serif; cursor:pointer;
+		margin-left:47px; transition:600ms;
+		&:hover{text-decoration: none;color:#050c16;cursor:pointer; }
+	}
+	@media (max-width : 480px) { /* Extra Small Devices, Phones */ 
+		display:block;
+		width:100vw; height:100vh;
+		background:white; 
+		top:0; right:-100vw;
+		z-index:99999;
+		color:white;
+		padding-top:30vh;
+		transition:700ms ease-in-out;
+		a{
+			display:block;
+			font-size:35px;
+			text-align: center;
+			margin-bottom:40px;
+		}
+	}
+}// themenus END
+.menuons{
+	@media (max-width : 480px) { /* Extra Small Devices, Phones */ 
+		right:0;
+		transition:700ms ease-in-out;
+	}
+}
+
+
+.wrap-1{
+	position: absolute;
+	width:100vw; height:100vh;
+	transition:600ms ease-in-out;
+	top:0; left:0;
+	@media (max-width : 480px) { /* Extra Small Devices, Phones */ 
+		overflow-y:scroll;	
+	}	
+	.thediv, .thediv-two{
+		position:absolute;
+		top:25vh;
+		border:1px solid lightblue;
+		height:5px;
+		width:100%;
+		border-right:0;
+		border-left:none;
+		z-index:9999;
+		@media (max-width : 480px) { /* Extra Small Devices, Phones */ 
+			display:none;
+		}				
+	}
+	.thediv-two{
+		top:60vh;
+	}
+
+	.profile-wrap{
+		height:calc(35vh - 5px);
+		top:calc(25vh + 5px);
+		position: absolute;
+		width:100%;	
+		display:grid;
+		grid-template-columns: repeat(9, 1fr);
+		grid-gap:30px;
+		align-items:center;
+		padding:0 50px;
+		@media(max-width : 1200px) { /* Large Devices, Wide Screens */
+			grid-template-columns: repeat(5, 1fr);
+		}
+		@media(max-width : 992px) { /* Medium Devices, Desktops */
+			grid-template-columns: repeat(5, 1fr);
+			grid-gap:15px;
+			padding:0 20px;
+		}
+		@media (max-width : 480px) { /* Extra Small Devices, Phones */ 
+			grid-template-columns:1fr 1fr;
+			padding-bottom:30px;
+			height:auto;
+		}
+
+		.profile-person{
+			height:140px;
+			border-radius:4px;
+			z-index: 9998;
+			width:110px;
+			margin-top:30px;
+			overflow: hidden;
+			padding:3px;
+			border:1px solid lightgray;
+			@media (max-width : 480px) { /* Extra Small Devices, Phones */ 
+				width:100%;
+				text-align: center;
+				margin-top:0px;
+				border:0;
+			}
+			img{
+				width:100%; height:100%;
+				cursor:pointer;
+				border-radius:4px;
+				@media (max-width : 480px) { /* Extra Small Devices, Phones */ 
+					width:110px;
+				}
+			}
+						
+		}// profile-person end
+	}
+	.select-bar{
+		height:calc(35vh + 15px);
+		top:calc(25vh - 5px);
+		left:50px;
+		width:110px; background:rgba(255,255,255, 0.7);
+		z-index: 999;
+		position: absolute;
+		transition:500ms ease-in-out;
+		display:flex;
+		align-items:flex-end;
+		border-bottom:3px solid rgba(70, 120, 201, 0.3);
+		border-top:3px solid rgba(70, 120, 201, 0.3);
+		h6{text-align: center;
+			font-size:12px; font-weight:400; width:100%;
+			padding-bottom:10px;
+			z-index:1000;
+			color:#4678c9;
+	//    font-family: 'Belleza', 'Sawarabi Mincho', 'Nanum Myeongjo', sans-serif;
+		}	
+		@media(max-width : 1200px) { /* Large Devices, Wide Screens */
+			display:none;
+		}
+	}
+
+	.theback-one{
+		position: absolute;
+		width:50vw;
+		height:60vh;
+		left:0; top:15vh;
+		background:lightblue;
+		opacity: .3;
+		@media (max-width : 480px) { /* Extra Small Devices, Phones */ 
+			position:fixed;
+		}				
+	}
+	.theback-two{
+		position: absolute;
+		width:55vw;
+		height:60vh;
+		right:0; top:25vh;
+		background:lightblue;
+		opacity:.2;
+		@media (max-width : 480px) { /* Extra Small Devices, Phones */ 
+			position:fixed;
+		}		
+	}
+
+
+}//wrap-1 end
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #fff; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background:#CEA2FF;  //#8baee8; // 
+}
+
+
+.mode-on{
+	top:-100vh;
+	@media (max-width : 480px) { /* Extra Small Devices, Phones */ 
+		top:0;
+//		left:-100vw;	
+		opacity: 0;
+		z-index: -999;
+	}	
+}
+
+.lang-wrap{
+	position: absolute;
+	bottom:0px;
+	transition:900ms ease-in-out;
+	@media (max-width : 480px) { /* Extra Small Devices, Phones */ 
+		display:none;
+	}	
+	.thelang{
+		position: absolute;
+		width:100%;
+		font-size:400px;
+		color:#8baee8;
+		bottom:-200px;
+		opacity: .3;
+		transition:800ms;
+		z-index: 999;
+	}
+	.theclear{opacity:1;}
+}
+.moveon{bottom:calc(90vh + 0px);}
+
+
+.wrap-2{
+	width:100%; height:100vh;
+	position: absolute;
+	top:100vh;
+	left:0;
+	transition:900ms ease-in-out;
+//	opacity:0.5;
+	@media (max-width : 480px) { /* Extra Small Devices, Phones */ 
+		top:0; left:-200vw;
+		position:fixed;
+	}
+
+	.profile-go{
+		display:grid;
+		grid-template-columns:1fr 1fr 200px;
+		grid-gap:80px;
+		padding:0 50px;
+		padding-top:160px;
+		@media(max-width : 1200px) { /* Large Devices, Wide Screens */
+			grid-template-columns:1fr 1fr 20px;		
+		}
+		@media(max-width : 992px) { /* Medium Devices, Desktops */
+			grid-template-columns:1fr 1fr;	
+			grid-gap:40px;
+		}
+		@media (max-width : 480px) { /* Extra Small Devices, Phones */ 
+			grid-template-columns:1fr;
+			padding-top:160px;
+			grid-gap:15px;
+		}
+
+		img{width:350px; height:420px; margin-left:140px;
+			-webkit-box-shadow: 2px 4px 15px -5px rgba(92,92,92,1);
+			-moz-box-shadow: 2px 4px 15px -5px rgba(92,92,92,1);
+			box-shadow: 2px 4px 15px -5px rgba(92,92,92,1);
+			object-fit:cover;
+			@media(max-width : 992px) { /* Medium Devices, Desktops */
+				margin-left:80px;
+			}
+			@media(max-width : 768px) { /* Small Devices, Tablets */
+				width:220px; height:300px;		
+				margin-top:10px;	
+			}
+			@media (max-width : 480px) { /* Extra Small Devices, Phones */ 
+				width:100px; height:120px;
+				margin-left:40px;
+			}
+		}
+		h2{
+			margin-top:10px;
+			margin-bottom:40px;
+			font-weight:300;
+			@media(max-width : 1200px) { /* Large Devices, Wide Screens */
+			
+			}
+			@media(max-width : 992px) { /* Medium Devices, Desktops */
+				font-size:25px;				
+			}
+			@media(max-width : 768px) { /* Small Devices, Tablets */
+				margin-top:70px;			
+			}
+			@media (max-width : 480px) { /* Extra Small Devices, Phones */ 
+				margin-top:0px;
+				margin-bottom:0px;
+				margin-left:40px;
+			}
+			@media (max-width : 320px) { /* Custom, iPhone Retina */ 
+			
+			}			
+		}//h2 END
+		.profile-desc{
+			position: relative;
+			padding-top:20px;
+			p{font-size:17px; font-weight:300; line-height: 1.8;
+				@media(max-width : 992px) { /* Medium Devices, Desktops */
+					font-size:14px;					
+				}
+				@media(max-width : 768px) { /* Small Devices, Tablets */
+					padding-top:0;
+				}
+				@media (max-width : 480px) { /* Extra Small Devices, Phones */ 
+					font-size:13px;
+					margin-left:40px;
+				}
+			}//p end
+			.theback{
+				position: absolute;
+				font-size:630px;
+				z-index: -10;
+				//background:orange;
+				opacity:0.2;
+				color:#fc7b95;
+				bottom:-230px; right:-120px;
+				padding:0px 150px;
+			}
+			.closing{
+				margin-top:70px;
+				width:100%;
+				text-align: right;
+				@media (max-width : 480px) { /* Extra Small Devices, Phones */ 
+				 margin-top:0;
+				 position: absolute;
+				 bottom:50px;
+				 margin-top:0;
+				}
+				.close-btn{
+					width:30px; height:30px;
+					border:1px solid #8baee8;
+					display:inline-block;
+					border-radius: 50%;
+					position: relative;
+					background:white;
+					animation:spin 4s linear infinite;
+					transition:500ms;
+					cursor:pointer;
+					text-align: center;
+					padding-top:6px;
+
+					&:hover{background: #8baee8; }
+				}// close-btn END
+				@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+				@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+				@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }				
+				.fas{color:#8baee8;
+					&:hover{
+						color:white;
+					}
+				}
+			}
+		}//profile-desc
+
+	}//profile-go
+
+}
+
+
+.wrap-3{
+	width:100%; height:100vh;
+	position: absolute;
+	top:100vh;
+	left:0;
+	background:white;
+	transition:900ms ease-in-out;
+	padding-top:200px;
+	//opacity:0.5;
+	@media (max-width : 480px) { /* Extra Small Devices, Phones */ 
+		width:100vw;
+		top:0; left:-200vw;		
+		padding-top:120px;
+		overflow-x:hidden;
+		overflow-y:hidden;
+	}
+
+	.album-next, .album-prev{
+		position: absolute;
+		right:-50px; bottom:40vh;
+		width:100px; height:100px;
+		background:#709de5;
+		transform:rotate(45deg);
+		border:1px solid #709de5;
+	  box-sizing: border-box;
+		transition:300ms ease-in-out;
+		cursor:pointer;
+		z-index:9999;
+		animation:meme 3s linear infinite;
+		@media (max-width : 480px) { /* Extra Small Devices, Phones */ 
+			top:default;
+			bottom:-50px;
+		}		
+		&:hover{
+			background:white;
+			border:1px solid rgba(112, 157, 229, 0.7);
+		}
+		&:before{
+			position:absolute;
+			content:'';
+			width:100px; height:100px;
+			top:0; left:0;
+			background:#709de5;
+			border:3px solid #709de5;
+			box-sizing: border-box;
+			transition:300ms ease-in-out;
+			opacity:0.5;
+		}
+		&:hover:before{
+			top:10px;
+			left:10px;
+
+		}	
+	}//album-next END
+	.album-prev{
+		left:-50px;
+		@media (max-width : 480px) { /* Extra Small Devices, Phones */ 
+			bottom:-50px;
+		}		
+		&:hover:before{
+			top:-10px;
+			left:-10px;
+		}			
+	}//album-prev end
+	@-moz-keyframes meme { 50%{opacity:.5;}  100% { opacity:1; } }
+	@-webkit-keyframes meme { 50%{opacity:.5;}  100% { opacity:1; } }
+	@keyframes meme { 50%{opacity:.3;} 100% { opacity:1; } }				
+
+	.album-wrap{
+		padding:0 200px;
+		display:grid;
+		grid-template-columns:1fr 1.2fr;
+		transition:700ms;
+
+		@media(max-width : 1200px) { /* Large Devices, Wide Screens */
+			padding:0 100px;
+			grid-gap:20px;
+		}
+		@media(max-width : 992px) { /* Medium Devices, Desktops */
+			grid-template-columns:1fr 1fr;
+			padding:0 90px;
+			grid-gap:20px;
+		}
+		@media(max-width : 768px) { /* Small Devices, Tablets */
+
+		}
+		@media (max-width : 480px) { /* Extra Small Devices, Phones */ 
+			grid-template-columns:1fr;
+		}
+		@media (max-width : 320px) { /* Custom, iPhone Retina */ 
+
+		}
+		.album-cover{
+			width:330px; height:330px;
+			margin-left:40px;
+			z-index: 100;
+			-webkit-box-shadow: 0px 4px 7px 2px rgba(189,189,189,1);
+			-moz-box-shadow: 0px 4px 7px 2px rgba(189,189,189,1);
+			box-shadow: 0px 4px 7px 2px rgba(189,189,189,1);
+
+			@media(max-width : 1200px) { /* Large Devices, Wide Screens */
+			
+			}
+			@media(max-width : 992px) { /* Medium Devices, Desktops */
+				margin-left:10px;
+				width:280px; height:280px;
+			}
+			@media(max-width : 768px) { /* Small Devices, Tablets */
+				width:200px; height:200px;
+			}
+			@media (max-width : 480px) { /* Extra Small Devices, Phones */ 
+				width:120px; height:120px;
+			}
+			@media (max-width : 320px) { /* Custom, iPhone Retina */ 
+			
+			}
+			
+		}
+		.album-desc{
+			position: relative;			
+			h4{font-weight:200; margin-bottom:30px; margin-top:20px;
+				@media (max-width : 480px) { /* Extra Small Devices, Phones */ 
+					margin-top:10px; margin-bottom:10px;
+					font-size:15px;
+				}
+			}
+			/* width */
+			::-webkit-scrollbar {
+			  width: 5px;
+			}
+
+			/* Track */
+			::-webkit-scrollbar-track {
+			  background: #fff; 
+			}
+			 
+			/* Handle */
+			::-webkit-scrollbar-thumb {
+			  background:#CEA2FF;  //#8baee8; // 
+			}
+
+
+			.thedeco{
+				position: absolute;
+				z-index: -10;
+				background:rgba(192, 214, 249,.3);
+				width:150%; height:280px;
+				top:78px; right:0;
+			}
+			.album-para{
+				width:100%;
+				height:280px;
+				overflow-y:scroll;
+				z-index: 999;
+				padding-right:40px;
+				padding-top:20px; padding-bottom:10px;
+				position: relative;
+				p{font-weight:300;
+					@media(max-width : 1200px) { /* Large Devices, Wide Screens */
+
+					}
+					@media(max-width : 992px) { /* Medium Devices, Desktops */
+
+					}
+					@media(max-width : 768px) { /* Small Devices, Tablets */
+						font-size:14px;
+						padding-right:30px;
+					}
+					@media (max-width : 480px) { /* Extra Small Devices, Phones */ 
+						padding-top:0;
+					}
+					@media (max-width : 320px) { /* Custom, iPhone Retina */ 
+
+					}
+				} // p end
+				.thecredit{
+					font-weight:300; font-size:13px; padding-left:30px;
+					@media (max-width : 480px) { /* Extra Small Devices, Phones */ 
+						padding-left:0;
+					}					
+				}
+				.playmv{
+					width:350px; height:200px;
+					padding:10px;border:1px solid rgba(112, 157, 229, 0.4);
+					margin-top:20px; margin-bottom:20px;
+					@media (max-width : 480px) { /* Extra Small Devices, Phones */ 
+						width:300px; height:200px;
+					}					
+				}
+			}
+
+			.closing{
+				//bottom:0; position:absolute;
+				//left:0; 
+				margin-top:10px;
+				padding-right:5px;
+				width:100%;
+				text-align: right;
+				color:#8baee8;
+				@media (max-width : 480px) { /* Extra Small Devices, Phones */ 
+					position: absolute;
+					bottom:50px;
+					right:20px;
+					z-index:9999;
+				}							
+				&:hover{color:white;}
+				.close-btn-disc{
+					width:30px; height:30px;
+					border:1px solid #8baee8;
+					display:inline-block;
+					border-radius: 50%;
+					position: relative;
+					background:white;
+					animation:spin 4s linear infinite;
+					transition:500ms;
+					cursor:pointer;
+					text-align: center;
+					padding-top:6px;
+					&:hover{background: #8baee8; }
+				}// close-btn END
+			}//closing END
+		}//album-desc END
+
+	}//album-wrap END
+	.disappear{opacity:0;}
+	.album-text{
+		position: absolute;
+		width:300px;
+		height:25px;
+		top:415px; right:34px;
+		transform:rotate(90deg);
+		font-size:15px;
+		color:#8baee8;
+		cursor:default;
+		transition:700ms;
+		//opacity:0.6
+
+		@media(max-width : 1200px) { /* Large Devices, Wide Screens */
+			display:none;
+		}
+				
+	}
+
+
+} // wrap-3 end
+
+.wrap-4{
+	width:100%; height:100vh;
+	position: absolute;
+	top:100vh;
+	left:0;
+	background:white;
+	transition:900ms ease-in-out;
+	//opacity:0.5;
+	padding-top:190px;
+	@media (max-width : 480px) { /* Extra Small Devices, Phones */ 
+		top:0; left:-200vw;
+		padding-top:120px;
+	}
+
+	.gallery-wrap{
+		width:calc(100% - 400px);
+		margin-left:200px;
+		height:380px;
+		overflow-y:scroll;
+		box-sizing: border-box;
+
+		@media(max-width : 1200px) { /* Large Devices, Wide Screens */
+			width:calc(100% - 200px);
+			margin-left:100px;
+		}
+		@media(max-width : 992px) { /* Medium Devices, Desktops */
+			width:calc(100% - 100px);
+			margin-left:50px;
+		}
+		@media(max-width : 768px) { /* Small Devices, Tablets */
+
+		}
+		@media (max-width : 480px) { /* Extra Small Devices, Phones */ 
+			width:calc(100% - 50px);
+			margin-left:25px;
+		}
+		@media (max-width : 320px) { /* Custom, iPhone Retina */ 
+
+		}
+	}//gallery-wrap end
+	.closing{
+		width:100%;
+		text-align: right;
+		padding:20px 210px;
+		@media (max-width : 480px) { /* Extra Small Devices, Phones */ 
+			position: absolute;
+			bottom:50px; right:45px;
+			padding:0;
+		}					
+		.close-btn-gallery{
+			width:30px; height:30px;
+			border:1px solid #8baee8;
+			display:inline-block;
+			border-radius: 50%;
+			position: relative;
+			background:white;
+			animation:spin 4s linear infinite;
+			transition:500ms;
+			cursor:pointer;
+			text-align: center;
+			padding-top:6px;
+			color:#8baee8;
+			&:hover{background: #8baee8; color:white; }
+		}// close-btn END
+		@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+		@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+		@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }	
+	}
+	.gallery-text{
+		position: absolute;
+		width:300px;
+		height:25px;
+		top:328px; right:40px;
+		transform:rotate(90deg);
+		font-size:15px;
+		color:#8baee8;
+		cursor:default;
+		transition:700ms;
+		//opacity:0.6
+		@media(max-width : 1200px) { /* Large Devices, Wide Screens */
+			display:none;
+		}			
+	}
+
+	/* width */
+	::-webkit-scrollbar {
+	  width: 5px;
+	}
+
+	/* Track */
+	::-webkit-scrollbar-track {
+	  background: #fff; 
+	}
+	 
+	/* Handle */
+	::-webkit-scrollbar-thumb {
+	  background:#CEA2FF;  //#8baee8; // 
+	}			
+} // wrap-4 end
+
+.mode-on-two{
+	top:0;
+	z-index: 990;
+	@media(max-width : 1200px) { /* Large Devices, Wide Screens */
+
+	}
+	@media(max-width : 992px) { /* Medium Devices, Desktops */
+
+	}
+	@media(max-width : 768px) { /* Small Devices, Tablets */
+
+	}
+	@media (max-width : 480px) { /* Extra Small Devices, Phones */ 
+		left:0;
+	}
+	@media (max-width : 320px) { /* Custom, iPhone Retina */ 
+
+	}
+}
+
+
